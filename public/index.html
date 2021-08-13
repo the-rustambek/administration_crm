@@ -1,107 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administration_crm</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./fonts/style.css">
 </head>
+
 <body>
 
 
-<div class="section p-4 " style="height:100vh">
-    <div class="container-fluid d-flex justify-content-between ">
-        <div class="aside w-25">
-<p class="aside-text text-light fw-bold  fs-4 mb-4 pb-4">
-    Kelajakni biz bilan quring
-</p>
-<button class="aside-btn ">
-    O'quvchilar
-</button>
-<div class="aside-box d-flex justify-content-between  flex-column">
-    <label class="aside-label" for="">
-        <p class="aside-text">
-            Kurslar
-        </p>
-        <select class="aside-kurs" name="" id="">
-            <option value="Kursni tanlang">Kursni tanlang</option>
-            <option value="FrontEnd">FrontEnd</option>
-            <option value="Python">Python</option>
-            <option value="Android">Android</option>
-            <option value="SMM">SMM</option>
-        </select>
-    </label>
-   
-    <label class="aside-label" for="">
-        <p class="aside-text">
-            Kurs turi
-        </p>
-        <select class="aside-turi" name="" id="">
-            <option value="Kurs turini tanlang">Kurs turini tanlang</option>
-            <option value="Offline">Offline(standart)</option>
-            <option value="Offline">Offline(bootcamp)</option>
-            <option value="Online">Online</option>
-            
-        </select>
-        
-    </label>
-    
-    <label class="aside-label" for="">
-        <p class="aside-text">
-            Ishlaysizmi ?
-        </p>
-        <select class="aside-turi" name="" id="">
-            <option value="Nima ish qilishingizni belgilang">Nima ish qilishingizni belgilang</option>
-            <option value="Ishlayman">Ishlayman</option>
-            <option value="Talaba">Talaba</option>
-            <option value="Ishsizman">Ishsizman</option>
-            
-        </select>
-        
-    </label>
-    <label class="aside-label" for="">
-        <p class="aside-text">
-            Dars vaqti
-        </p>
-        <select class="aside-turi" name="" id="">
-            <option value="Kurs vaqtini tanlang">Kurs vaqtini tanlang</option>
-            <option value="08:00 - 12:00">08:00 - 12:00</option>
-            <option value="12:00 - 16:00">12:00 - 16:00</option>
-            <option value="16:00 - 22:00">16:00 - 22:00</option>
-            
-        </select>
-        
-    </label>
-    <label class="aside-label" for="">
-        <p class="aside-text">
-            Kelish manbasi
-        </p>
-        <select class="aside-manba" name="" id="">
-            <option value="Manbani tanlang">Manbani tanlang</option>
-            <option value="Telegram">Telegram</option>
-            <option value="Instagram">Instagram</option>
-            <option value="Taklif qilishgan">Taklif qilishgan</option>
-            <option value="O'zim topdim">O'zim topdim</option>
-        </select>
-        
-    </label>
+    <div class="section p-4 " style="height:100vh">
+        <div class="container-fluid d-flex justify-content-between ">
+            <div class="aside w-25">
+                <p class="aside-text text-light fw-bold  fs-4 mb-3 pb-3 pt-3">
+                    Kelajakni biz bilan quring
+                </p>
+                <button class="aside-btn btn-outline-success">
+                    O'quvchilar
+                </button>
+                <div class="aside-box d-flex justify-content-between mt-3 flex-column">
+                    <label class="aside-label my-2" for="">
+                        <p class="aside-text text-light fs-5 fw-600 ">
+                            Kurslar
+                        </p>
+                        <select class="aside-kurs  p-1" style="width:260px" name="" id="">
+                            <option value="Kursni tanlang">Kursni tanlang</option>
+                            <option value="FrontEnd">FrontEnd</option>
+                            <option value="Python">Python</option>
+                            <option value="Android">Android</option>
+                            <option value="SMM">SMM</option>
+                        </select>
+                    </label>
+
+                    <label class="aside-label my-2" for="">
+                        <p class="aside-text fs-6 fw-600 text-light ">
+                            Kurs turi
+                        </p>
+                        <select class="aside-turi  p-1" style="width:260px" name="" id="">
+                            <option value="Kurs turini tanlang">Kurs turini tanlang</option>
+                            <option value="Offline">Offline(standart)</option>
+                            <option value="Offline">Offline(bootcamp)</option>
+                            <option value="Online">Online</option>
+
+                        </select>
+
+                    </label>
+
+                    <label class="aside-label my-2" for="">
+                        <p class="aside-text fs-6 fw-600 text-light">
+                            Ishlaysizmi ?
+                        </p>
+                        <select class="aside-turi  p-1" style="width:260px" name="" id="">
+                            <option value="Nima ish qilishingizni belgilang">Nima ish qilishingizni belgilang</option>
+                            <option value="Ishlayman">Ishlayman</option>
+                            <option value="Talaba">Talaba</option>
+                            <option value="Ishsizman">Ishsizman</option>
+
+                        </select>
+
+                    </label>
+                    <label class="aside-label my-2" for="">
+                        <p class="aside-text fs-6 fw-600 text-light">
+                            Dars vaqti
+                        </p>
+                        <select class="aside-turi p-1" style="width:260px" name="" id="">
+                            <option value="Kurs vaqtini tanlang">Kurs vaqtini tanlang</option>
+                            <option value="08:00 - 12:00">08:00 - 12:00</option>
+                            <option value="12:00 - 16:00">12:00 - 16:00</option>
+                            <option value="16:00 - 22:00">16:00 - 22:00</option>
+
+                        </select>
+
+                    </label>
+                    <label class="aside-label" for="">
+                        <p class="aside-text fs-6 fw-600 text-light">
+                            Kelish manbasi
+                        </p>
+                        <select class="aside-manba p-1" style="width:260px" name="" id="">
+                            <option value="Manbani tanlang">Manbani tanlang</option>
+                            <option value="Telegram">Telegram</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Taklif qilishgan">Taklif qilishgan</option>
+                            <option value="O'zim topdim">O'zim topdim</option>
+                        </select>
+
+                    </label>
 
 
-</div>
+                </div>
+            </div>
+
+            <div class="main w-75 px-4 ms-4">
+                <nav class="nav d-flex justify-content-between align-items-center">
+                    <div class="d-flex ms-2 justify-content-between align-items-center">
+                        <img class=" rounded-circle" style="width:80px; height:80px" src="./img/it_time.jpg" alt="">
+                        <p class="ms-4 ps-2 fs-4 fw-bold text-light"><span>IT - Time </span> o'quv markaziga xush
+                            kelibsiz</p>
+                    </div>
+
+                    <div class="">
+                        <a href="#" class="">
+                            <img style="width:30px;height:30px" src="./img/Vector (2).png" alt="">
+                        </a>
+                    </div>
+                </nav>
+                <div class="main-form mt-4 pt-4 ">
+                    <form class="row form ">
+                        <div class="col-3">
+                            <input type="text" class="main-name form-control" minlength="3" required
+                                placeholder="Ismingizni kiriting" aria-label="First name">
+                        </div>
+                        <div class="col-3">
+                            <input type="number" class="main-tel form-control" min="3" required placeholder="Telefon raqam"
+                                aria-label="Last name">
+                        </div>
+                        <div class="col-2">
+                            <input class="main-not-found form-control bg-warning" placeholder="To'ldirilmagan" value="To'ldirilmagan"
+                                type="submit" aria-label="Last name">
+
+                        </div>
+                        <div class="col-2">
+                            <button type="button" class="main-delete btn btn-danger  px-4">O'chirish</button></div>
+                        <div class="col-2">
+                            <button class="main-add  btn btn-dark px-4">Qo'shish</button></div>
+
+
+                    </form>
+                    <table class="table d-none text-light mt-4 pt-4">
+                        <thead  >
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Ism</th>
+                                <th scope="col">Telefon</th>
+                                <th scope="col">Kurs</th>
+                                <th scope="col">Kurs turi</th>
+                                <th scope="col">Ish joyi</th>
+                                <th scope="col">Dars vaqti</th>
+                                <th scope="col">Kelish manbasi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
-
-        <div class="main w-75">
-<nav class="nav">
-    <div class="">
-        <img class="w-25 round-circle" src="./img/it_time.jpg" alt="">
-
     </div>
-</nav>
-        </div>
-    </div>
-</div>
 
 
 
@@ -113,8 +173,11 @@
 
 
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
     <script src="./main.js"></script>
 </body>
+
 </html>
