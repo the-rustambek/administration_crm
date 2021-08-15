@@ -16,9 +16,9 @@ module.exports = class Database {
         return data.data;
         
 }
-async addData(name,number, kurs,kursTuri,ishJoyi, darsVaqti,kelishManbasi){
+async addData(id,name,number, kurs,kursTuri,ishJoyi, darsVaqti,kelishManbasi){
     const data = {
-        id:(this.data.length-1)+1,
+        id:(this.data.length-1).id+1,
         name:name,
         number:number,
         kurs:kurs,
