@@ -4,16 +4,17 @@ const mainNameElement = document.querySelector(".main-name")
 const mainTelElement = document.querySelector(".main-tel")
 const mainDeleteElement= document.querySelector(".main-delete")
 const mainNotFoundElement = document.querySelector(".main-not-found")
+const formElement = document.querySelector(".form")
 
-    mainAddElement.addEventListener("click",event =>{
+formElement.addEventListener("submit", event => {
+    event.preventDefault()
+})
 
 
-if(!mainNameElement.value("") && !mainTelElement.value("")){
+const  tableElement = document.querySelector(".table")
 
-        event.preventDefault();
-        const  tableElement = document.querySelector(".table")
-        // tableElement.classList.add("d-block")
-    
+    mainAddElement.addEventListener("click",event =>{  
+if(mainNameElement.value != ""){
         const tbodyElement = document.createElement("tbody")
         const trElement = document.createElement("tr")
         const newIdElement = document.createElement("td")
@@ -50,19 +51,20 @@ if(!mainNameElement.value("") && !mainTelElement.value("")){
     
      
         tbodyElement.prepend(trElement) 
-        tableElement.prepend(tbodyElement)
-        // newNameElement.value= " "
-        // newNumberElement.value= " "
-        console.log(tableElement );
-        console.log(tbodyElement);
+        tableElement.prepend(tbodyElement) 
+    // }
     }
-    })
+else{
 
-
-mainDeleteElement.addEventListener("click" ,event =>{
-    tbodyElement.reset()
+}
 
 })
+
+
+// mainDeleteElement.addEventListener("click" ,event =>{
+//     tbodyElement.reset()
+
+// })
 
 
 
