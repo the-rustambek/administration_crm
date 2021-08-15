@@ -16,7 +16,7 @@ if(!mainNameElement.value("") && !mainTelElement.value("")){
     
         const tbodyElement = document.createElement("tbody")
         const trElement = document.createElement("tr")
-        // const newIdElement = document.createElement("td")
+        const newIdElement = document.createElement("td")
         const newNameElement = document.createElement("td")
         const newNumberElement = document.createElement("td")
         const newKursElement = document.createElement("td")
