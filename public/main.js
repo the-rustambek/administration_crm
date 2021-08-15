@@ -8,7 +8,7 @@ const mainNotFoundElement = document.querySelector(".main-not-found")
     mainAddElement.addEventListener("click",event =>{
 
 
-// if(!mainNameElement.value("") && !mainTelElement.value("")){
+if(!mainNameElement.value("") && !mainTelElement.value("")){
 
         event.preventDefault();
         const  tableElement = document.querySelector(".table")
@@ -55,7 +55,7 @@ const mainNotFoundElement = document.querySelector(".main-not-found")
         // newNumberElement.value= " "
         console.log(tableElement );
         console.log(tbodyElement);
-    // }
+    }
     })
 
 
