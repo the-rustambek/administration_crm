@@ -47,7 +47,7 @@ app.delete("/delete/:id", async (req, res) =>{
 })
 
 
-app.listen(3030, () => {
-    console.log("App running at 5005")
+app.listen(3000, () => {
+    console.log("App running at 3000")
     db.readFile()
 })
