@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../services/style.css">
 </head>
 
-<body>
+<body style="background-color: #184A3F;">
 
 
     <div class="section p-4 " style="height:100vh">
@@ -110,19 +110,22 @@
                     </div>
                 </nav>
                 <div class="main-form mt-4 pt-4 ">
-                    <form class="row d-flex form justify-content-between  g-3"> 
-                            <input required type="text" class="main-name col-3 " minlength="3" 
+                    <div class="row d-flex justify-content-between align-items-center">
+                    <form class="col-9 d-flex form justify-content-between  g-3"> 
+                            <input required type="text" class="main-name col-4 " minlength="3" 
                                 placeholder="Ismingizni kiriting" aria-label="First name">
                        
-                            <input required type="number" class="main-tel  col-3" min="3" placeholder="Telefon raqam"
+                            <input required type="number" class="main-tel  col-4" min="3" placeholder="Telefon raqam"
                                 aria-label="Last name"> 
                         
                             <!-- <input class="main-not-found form-control bg-warning" placeholder="To'ldirilmagan" value="To'ldirilmagan"
                                   aria-label="Last name">  -->
-                                <button    class="main-add  btn btn-dark col-2  ">Qo'shish</button>
-                            <button  class="main-delete btn btn-danger  col-2 ">O'chirish</button>  
+                                <button    class="main-add  btn btn-dark col-3  ">Qo'shish</button>
+                             
 
                     </form>
+                    <button  class="main-delete btn btn-danger  col-2 mt-2">O'chirish</button> 
+                </div>
                     <table class="table  text-light mt-4 pt-4">
                         <thead  >
                             <tr>

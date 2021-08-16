@@ -16,7 +16,7 @@ module.exports = class Database {
         return data.data;
         
 }
-async addData(id,name,number, kurs,kursTuri,ishJoyi, darsVaqti,kelishManbasi){
+async addData(name,number, kurs,kursTuri,ishJoyi, darsVaqti,kelishManbasi){
     const data = {
         id:(this.data.length-1)+1,
         name:name,
@@ -37,7 +37,12 @@ async addData(id,name,number, kurs,kursTuri,ishJoyi, darsVaqti,kelishManbasi){
 
     async deleteTodo(id){
         let data = await this.readFile()
-        let filtered
+        let filteredData = data.filter((e) => e.id !=  id)
+        await fs.writeFile(
+            this.filePath, 
+            JSON.stringify({data:filteredData})
+        )
+
     }
 
 

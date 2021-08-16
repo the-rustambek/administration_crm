@@ -38,8 +38,16 @@ app.post("/add_todo", async (req, res) => {
     res.json(added_todo)
 })
 
+app.delete("/delete/:id", async (req, res) =>{
+    // console.log(req.params);
+    await db.deleteTodo(req.params.id);
+    res.json({
+        ok:true,
+    })
+})
 
-app.listen(3000, () => {
+
+app.listen(3030, () => {
     console.log("App running at 5005")
     db.readFile()
 })
