@@ -22,10 +22,8 @@ app.get("/", async (req, res) => {
     res.send(response)
 
 })
-app.get("/home", async (req, res) => {
+app.get("/todos", async (req, res) => {
 
-    // let x= await db.addData("uygon","ds","ds","ds","sdsd","dsd","5s");
-    // console.log(x)
     let data = await db.readFile();
     // console.log(data)
     res.json({
@@ -36,12 +34,12 @@ app.get("/home", async (req, res) => {
 
 app.post("/add_todo", async (req, res) => {
     // console.log(req.body)
-    const added_todo = await db.addData(req.body.name, req.body.number, req.body.kurs, req.body.kursTuri,req.body.ishJoyi,req.body.darsVaqti,req.body.kelishManbasi)
-res.json(added_todo)
+    const added_todo = await db.addData(req.body.name, req.body.number, req.body.kurs, req.body.kursTuri, req.body.ishJoyi, req.body.darsVaqti, req.body.kelishManbasi)
+    res.json(added_todo)
 })
 
 
-app.listen(3030, () => {
+app.listen(3000, () => {
     console.log("App running at 5005")
     db.readFile()
 })

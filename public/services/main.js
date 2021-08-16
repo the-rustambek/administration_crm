@@ -10,13 +10,13 @@ async function loadTodos(){
     response = await response.json();
     // console.log(response);
     renderTodos(response.data.reverse());
-    
-}
-
+};
+const tbodyElement = document.querySelector(".tbody")
 function renderTodos(array){
+    tbodyElement.textContent = null;
     for(let todo of array){
         // console.log(todo)
-        const tbodyElement = document.createElement("tbody")
+       
         const trElement = document.createElement("tr")
         const newIdElement = document.createElement("td")
         const newNameElement = document.createElement("td")
@@ -27,22 +27,15 @@ function renderTodos(array){
         const newDarsVaqtiElement = document.createElement("td")
         const newKelishManbasiElement = document.createElement("td")
        
-        const asideKursElement = document.querySelector(".aside-kurs")
-        const asideTuriElement =  document.querySelector(".aside-turi")
-        const asideIshElement = document.querySelector(".aside-ish")
-        const asideVaqtiElement = document.querySelector(".aside-vaqti")
-        const asideManbaELement = document.querySelector(".aside-manba")
-    
-         newIdElement.textContent=id;
-    
-        
-        newNameElement.textContent = mainNameElement.value;
-        newNumberElement.textContent = mainTelElement.value;
-        newKursElement.textContent = asideKursElement.value;
-        newKursTuriElement.textContent =  asideTuriElement.value;
-        newIshJoyiElement.textContent =asideIshElement.value;
-        newDarsVaqtiElement.textContent =asideVaqtiElement.value;
-        newKelishManbasiElement.textContent =asideManbaELement.value;
+     
+        newIdElement.textContent=todo.id; 
+        newNameElement.textContent = todo.name;
+        newNumberElement.textContent = todo.number;
+        newKursElement.textContent = todo.kurs;
+        newKursTuriElement.textContent =todo.kursTuri;
+        newIshJoyiElement.textContent =todo.ishJoyi;
+        newDarsVaqtiElement.textContent =todo.darsVaqti;
+        newKelishManbasiElement.textContent =todo.kelishManbasi;
     
         trElement.appendChild(newIdElement)
         trElement.appendChild(newNameElement)
@@ -52,43 +45,13 @@ function renderTodos(array){
         trElement.appendChild(newIshJoyiElement)
         trElement.appendChild(newDarsVaqtiElement)
         trElement.appendChild(newKelishManbasiElement)
-    
-     
+ 
         tbodyElement.prepend(trElement) 
         tableElement.prepend(tbodyElement) 
+       
         
     }
 }
-
-
-formElement.addEventListener("submit",async (event) => {
-    event.preventDefault();
-    let response = await fetch("/add_todo",{
-        method:"POST",
-        headers:{
-            "Content-Type":"application.json",
-        },
-        body: JSON.stringify
-    })
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 const mainAddElement = document.querySelector(".main-add")
@@ -97,69 +60,41 @@ const mainTelElement = document.querySelector(".main-tel")
 const mainDeleteElement= document.querySelector(".main-delete")
 const mainNotFoundElement = document.querySelector(".main-not-found")
 const formElement = document.querySelector(".form")
-
-formElement.addEventListener("submit", event => {
-    event.preventDefault()
-})
-
-
 const  tableElement = document.querySelector(".table")
+const asideKursElement = document.querySelector(".aside-kurs")
+const asideTuriElement =  document.querySelector(".aside-turi")
+const asideIshElement = document.querySelector(".aside-ish")
+const asideVaqtiElement = document.querySelector(".aside-vaqti")
+const asideManbaELement = document.querySelector(".aside-manba")
 
-    mainAddElement.addEventListener("click",event =>{  
-if(mainNameElement.value != ""){
-        const tbodyElement = document.createElement("tbody")
-        const trElement = document.createElement("tr")
-        const newIdElement = document.createElement("td")
-        const newNameElement = document.createElement("td")
-        const newNumberElement = document.createElement("td")
-        const newKursElement = document.createElement("td")
-        const newKursTuriElement = document.createElement("td")
-        const newIshJoyiElement = document.createElement("td")
-        const newDarsVaqtiElement = document.createElement("td")
-        const newKelishManbasiElement = document.createElement("td")
-       
-        const asideKursElement = document.querySelector(".aside-kurs")
-        const asideTuriElement =  document.querySelector(".aside-turi")
-        const asideIshElement = document.querySelector(".aside-ish")
-        const asideVaqtiElement = document.querySelector(".aside-vaqti")
-        const asideManbaELement = document.querySelector(".aside-manba")
-    
-         newIdElement.textContent=newNameElement.length;
-    
+
+
+formElement.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    let response = await fetch("/add_todo",{
+        method:"POST",
+        headers:{
+            "Content-type":"application/json"
+        },
+        body: JSON.stringify({
+            name: mainNameElement.value,
+            number: mainTelElement.value,
+            kurs: asideKursElement.value,
+            kursTuri: asideTuriElement.value,
+            ishJoyi:asideIshElement.value,
+            darsVaqti: asideVaqtiElement.value,
+            kelishManbasi:asideManbaELement.value,
+            
+            
+        }),
         
-        newNameElement.textContent = mainNameElement.value;
-        newNumberElement.textContent = mainTelElement.value;
-        newKursElement.textContent = asideKursElement.value;
-        newKursTuriElement.textContent =  asideTuriElement.value;
-        newIshJoyiElement.textContent =asideIshElement.value;
-        newDarsVaqtiElement.textContent =asideVaqtiElement.value;
-        newKelishManbasiElement.textContent =asideManbaELement.value;
-    
-        trElement.appendChild(newIdElement)
-        trElement.appendChild(newNameElement)
-        trElement.appendChild(newNumberElement)
-        trElement.appendChild(newKursElement)
-        trElement.appendChild(newKursTuriElement)
-        trElement.appendChild(newIshJoyiElement)
-        trElement.appendChild(newDarsVaqtiElement)
-        trElement.appendChild(newKelishManbasiElement)
-    
-     
-        tbodyElement.prepend(trElement) 
-        tableElement.prepend(tbodyElement) 
-    // }
-    }
-else{
-
-}
-
+        
+    });
+    response = await response.json()
+    console.log(response);
+        loadTodos()
+        
 })
-
-
-// mainDeleteElement.addEventListener("click" ,event =>{
-//     tbodyElement.reset()
-
-// })
 
 
 
